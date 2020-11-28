@@ -4,19 +4,23 @@
             let prevContent="";
 
             function mouseOver(){
-                prevContent = document.getElementById('demo').innerHTML;
-                document.getElementById('demo').innerHTML = "Your mouse is here";
+                document.getElementById('imageSlot1').src = "assets/bless/rainbow.jpg"
+                // prevContent = document.getElementById('demo').innerHTML;
+                // document.getElementById('demo').innerHTML = "Your mouse is here";
+
             }
             function mouseOut(){
-                document.getElementById('demo').innerHTML = prevContent;
+                document.getElementById('imageSlot1').src = "assets/bless/bless adapter.jpg"
             }
 
         </script>
     </HEADER>
     <BODY>
-        <p id="demo" onmouseover=mouseOver() onmouseout=mouseOut()> Empty now!!! </p>
-        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+   
         
+        <img id='imageSlot1' src='assets/bless/bless adapter.jpg' width='600' height='600'
+         onmouseover='mouseOver()' onmouseout=mouseOut()/> 
+
     </BODY>
 
 </HTML>
