@@ -1,0 +1,67 @@
+<HTML>
+    <HEADER>
+        <script>
+            const numImages=7;
+            function mouseOver(){
+                for(let i=0; i<numImages; i++) {
+                    let element = document.getElementById('animateImage'+i);
+                    element.classList.add('animateImage');
+                }
+            }
+            function mouseOut(){
+                for(let i=0; i<numImages; i++) {
+                    let element = document.getElementById('animateImage'+i)    
+                    element.classList.remove('animateImage');
+                }
+            }
+        </script>
+        <style>
+            .backgroundBox {
+                width: 600px;
+                height: 600px;
+            }
+            .backImage {
+                width: 600px;
+                height: 600px;
+                position:absolute;
+                z-index: 1;
+            }
+            .unanimatedImage{
+                position:absolute;
+                width: 600px;
+                height: 600px;
+                opacity:0;
+            }
+            .animateImage{
+                position:absolute;
+                width: 600px;
+                height: 600px;
+                opacity:0;
+                animation-name: testanime;
+                animation-duration: var(--duration);
+                animation-delay: var(--delay);
+                z-index: 2;
+            }
+            @keyframes testanime {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </HEADER>
+    <BODY>
+        <div class='backgroundBox' onmouseover='mouseOver()' onmouseout='mouseOut()' width='600' height='600'>
+            <img id='backImage' class='backImage' src='assets/bless/bless adapter.jpg'/> 
+            <img id='animateImage0' class='unanimatedImage' src='assets/bless/red1.png' style='--duration:1s;--delay:0s;'/>
+            <img id='animateImage1' class='unanimatedImage' src='assets/bless/orange2.png' style='--duration:1s;--delay:0.5s;'/>
+            <img id='animateImage2' class='unanimatedImage' src='assets/bless/yellow3.png' style='--duration:1s;--delay:1s;'/>
+            <img id='animateImage3' class='unanimatedImage' src='assets/bless/green4.png' style='--duration:1s;--delay:1.5s;'/>
+            <img id='animateImage4' class='unanimatedImage' src='assets/bless/darkgreen5.png' style='—duration:1s;—delay:2s;'/>
+            <img id='animateImage5' class='unanimatedImage' src='assets/bless/blue6.png' style='—duration:1s;—delay:2.5s;'/>
+            <img id='animateImage6' class='unanimatedImage' src='assets/bless/7 navy.png' style='—duration:1s;—delay:3s;'/>
+        </div>
+    </BODY>
+</HTML>
